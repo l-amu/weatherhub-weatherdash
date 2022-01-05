@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css"/>
     <title>WEATHER DASH</title>
 </head>
@@ -19,8 +20,8 @@
               <h3 class="card-header text-uppercase">Search City</h3>
               <div class="card-body">
                 <!-- <label class="form-label" for="username"></label> -->
-                <input class="inputvalue" id="inputname" type="text" autofocus="true" placeholder="e.g Toronto"/>
-                <input  type="submit" class="button" value="submit" />
+                <input class="searchCity" id="searchCity" type="text" autofocus="true" placeholder="e.g Toronto"/>
+                <input  type="submit" class="searchBtn" id="searchBtn" value="submit" />
 
                 <!-- <button id="searchBtn" class="btn d-block">Search</button> -->
               </div>
@@ -30,7 +31,7 @@
           <div class="history" id="history-container">
 
           </div>
-<div class="row float-right">
+<div class="current-city-container row float-right">
     <div class="col-12 col-sm-6 test ">
         <span>ffx</span>
     </div>
