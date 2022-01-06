@@ -13,7 +13,7 @@ var currentCondtion = function (cityData) {
     } else {
         // alert("Please enter a correct name");
     }
-    var test = cityData.
+    var test = cityData.rain
     console.log(test)
 
     // for (let i = 0; i < userInput.length; i++) {
@@ -46,7 +46,7 @@ var weatherData = function (inputvalueEl) {
 
 $("#searchBtn").on("click", (event) => {
     event.preventDefault();
-    currentCondtion()
+    currentCondtion(event)
 
 })
 

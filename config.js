@@ -1,3 +1,3 @@
 var config = {
-    API_KEY : '3ec1b3f4bd65d5f3f20e87b9ad2091e9',
+    API_KEY : '3300d24fadf6387e356be01a490f7918',
   }
