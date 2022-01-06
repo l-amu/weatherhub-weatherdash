@@ -1,19 +1,19 @@
-var searchValueEl = document.querySelector(".searchCity")
+// var searchValueEl = document.querySelector(".searchCity")
 // var searchBtn  = document.querySelector(".button")
 var currentCityContainerEl = document.querySelector("current-city-container")
-const apiKey = process.env.REACT_APP_API_KEY
-console.log(process.env.apiKey)
+const apiKey = config.API_KEY
 
-var currentCondtion = function (cityInfo) {
-    inputvalueEl = $("#searchCity").val()
-    var searchValueEl = inputvalueEl.value
+var currentCondtion = function (cityData) {
+    let inputvalueEl = $("#searchCity").val()
+    var searchValueEl = inputvalueEl
+    console.log(searchValueEl)
     if (searchValueEl) {
-        weatherData(searchValueEl);
+        weatherData(inputvalueEl);
         inputvalueEl.value = "";
     } else {
         // alert("Please enter a correct name");
     }
-    var test = cityInfo.city.coord.lon
+    var test = cityData.
     console.log(test)
 
     // for (let i = 0; i < userInput.length; i++) {
@@ -21,20 +21,19 @@ var currentCondtion = function (cityInfo) {
     //     cityName.innerText = city.name + "(" + timezone + ")"
     //     console.log(cityName)
     // }
-
-
 }
 
 var weatherData = function (inputvalueEl) {
-    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + inputvalueEl + "&appid=" + APIKEY;
+    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + inputvalueEl + "&appid=" + apiKey;
     console.log(inputvalueEl)
     fetch(apiUrl)
         .then(function (response) {
             if (response.ok) {
                 response.json()
                     .then(function (data) {
-                        var cityInfo = data
-                        currentCondtion(cityInfo)
+                        var cityData = data
+                        currentCondtion(cityData)
+                        // return currentCondtion
                         //   console.log(info)
                     });
             } else {
@@ -47,8 +46,7 @@ var weatherData = function (inputvalueEl) {
 
 $("#searchBtn").on("click", (event) => {
     event.preventDefault();
-    inputvalueEl = $("#searchCity").val()
-    currentCondtion(inputvalueEl)
+    currentCondtion()
 
 })
 
